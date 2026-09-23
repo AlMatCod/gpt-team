@@ -1,239 +1,36 @@
-<!DOCTYPE html>
+<!DOSTYPE html>
 <html>
  <head>
   <title>GPTteam about</title>
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    :root {
-        --primary: #FFFF09;
-        --dark: #0f0f0f;
-        --card-bg: rgba(20, 20, 20, 0.85);
-        --border: rgba(255, 255, 255, 0.1);
-        --text: #ffffff;
-        --text-secondary: #b0b0b0;
-    }
-
-    body {
-        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
-        background-attachment: fixed;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
-
-    /* HEADER */
-    header {
-        background: rgba(15, 15, 15, 0.95);
-        border-bottom: 3px solid var(--primary);
-        padding: 25px 40px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(10px);
-    }
-
-    header h1 {
-        font-family: 'Segoe UI', sans-serif;
-        font-size: 28px;
-        color: var(--primary);
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-weight: 700;
-    }
-
-    header h1 img {
-        width: 70px;
-        height: auto;
-    }
-
-    header h2 {
-        color: var(--dark);
-        font-size: 24px;
-        margin-top: 15px;
-    }
-
-    header a {
-        display: inline-block;
-        margin: 15px auto;
-    }
-
-    header button {
-        background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
-        color: #fff;
-        border: none;
-        width: 150px;
-        height: 45px;
-        border-radius: 5px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    header button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 15px rgba(255, 255, 9, 0.2);
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    /* SECTION */
-    .section {
-        background: var(--card-bg);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 40px;
-        margin: 40px 0;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(8px);
-        animation: fadeIn 0.8s ease-out;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .section h3 {
-        font-size: 32px;
-        text-align: center;
-        color: var(--primary);
-        margin-bottom: 30px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .section img {
-        display: block;
-        margin: 20px auto;
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        transition: transform 0.3s ease;
-    }
-
-    .section img:hover {
-        transform: scale(1.02);
-    }
-
-    .section h4 {
-        color: var(--text);
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .section li {
-        color: var(--text-secondary);
-        font-size: 16px;
-        margin: 10px 0;
-        list-style: none;
-        text-align: center;
-        line-height: 1.8;
-    }
-
-    .section li[style*="color: yellow"] {
-        color: var(--primary) !important;
-    }
-
-    /* FOOTER */
-    footer {
-        background: var(--primary);
-        color: var(--dark);
-        padding: 30px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 14px;
-        margin-top: 60px;
-        border-top: 3px solid var(--dark);
-    }
-
-    footer h1 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    footer img {
-        width: 70px;
-        height: auto;
-        margin-left: 10px;
-    }
-
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .section {
-            padding: 25px;
-        }
-
-        .section h3 {
-            font-size: 24px;
-        }
-
-        .section img {
-            width: 100%;
-            height: auto;
-        }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
  </head>
 
- <body>
-   <header>
-     <h1>GPTteam<img src="logo.png"></h1>
-     <a href="https://search.brave.com/search?q=%D0%BA%D0%B0%D0%BA+%D0%B2%D1%81%D1%82%D1%83%D0%BF%D0%B8%D1%82%D1%8C+%D0%BA+%D0%B3%D0%BF%D1%82" rel="nofollow" target="_blank">
-       <button>Social Networks</button>
-     </a>
-     <h2>Welcome to GPTteam!</h2>
-   </header>
+ <header style="background-color: #FFFF09; color; white; padding: 30px;">
+ <h1 style="color: black;">GPTteam<img src="logo.png" width="70"></img>
+ <a style="display:block; margin:auto;" href="https://search.brave.com/search?q=%D0%BA%D0%B0%D0%BA+%D0%B2%D1%81%D1%82%D1%83%D0%B2%D0%B8%D1%82%D1%8C+%D0%BA+%D0%B3%D0%BF%D1%82" rel="nofollow" target="_blank"> <button class="custom-btn btn-12"><span>Social Networks</span><span>OUR</span></button></a>
+ <h2 style="color: black;">Welcome to website GPTteam!</h2>
+ </header>
 
-   <div class="container">
-     <section class="section">
-       <h3>About us</h3>
-       <img src="logo.png" width="300" alt="GPTteam Logo">
-       <h4>Who are we?</h4>
-       <li>We are a student-led robotics team from Kazakhstan where we love building robots</li>
-       <li>Our team includes 7 students</li>
-       <li>We participate in FIRST Robotics competitions</li>
-       <img src="photo1.jpg" width="600" alt="Team photo">
-       <img src="photo2.jpg" width="600" alt="Robot photo">
-     </section>
+ <head>
+    <h3 style="text-align: center;">e</h3>
+  <img  style="display:block; margin:auto;" src="logo.png" width="300" ></img>
+  <style>style="background-color: #0050b3; color; white padding: 30px;"</style>
 
-     <section class="section">
-       <h3>Our Members</h3>
-       <li>Ivan (Engineer)</li>
-       <li style="color: #FFFF09;">Alex (Web-Programmer)</li>
-       <li>Aibar (Photographer)</li>
-       <li style="color: #FFFF09;">Mansur (Robot-Programmer)</li>
-       <li>Alnur (Engineer)</li>
-       <li>Nygmet (Builder)</li>
-     </section>
-   </div>
+  <i><h2 style="text-align: center; color: white;">Who are we?</h2></i>
+  <h3 style="text-align: center; color: white;"><li>We are a student-led robotics team from Kazakhstan where love building robots</li></h3>
+  <h3 style="text-align: center; color: white;"><li>Our team include 7 students in team</li></h3> 
+  <h3 style="text-align: center; color: white;"><li>blabla bla bla bla bla</li></h3>
+  <img style="display:block; margin:auto;" src="photo1.jpg" width="600" ></img><img style="display:block; margin:auto;" src="photo2.jpg" width="600" > 
+ </head>
 
-   <footer>
-     <h1>G2026 FIRST GPTteam. Made by GPTteam #34155 for FIRST Community <img src="logo.png"></h1>
-   </footer>
- </body>
+ <head>
+  <h1 style="color: white; text-align: center;"> Our members</h1>
+  <h3 style="color: white; text-align: center;"><li>Ivan(Engineer)</li> <li style="color: yellow; text-align: center;">Alex(Web-Programmer)</li> <li>Aibar(Operator)</li> <li style="color: yellow; text-align: center;">Mansur(Robot-Programmer)</li> <li>Alnur(Engineer)</li><li>Nygmet(Builder)</li></h3>
+ </head>
+
+ <footer style="background-color: #FFFF09; color; white; padding: 23px;">
+  <h1>G2026 FIRST GPTteam. Made by GPTteam #34155 for FISRT Community  <img src="logo.png" width="70" ></img></h1>
+ </footer>
 </html>
+
+// Background from <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a>
