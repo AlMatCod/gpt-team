@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GPTteam | FIRST Robotics Team #34155</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FFFF09;
+            --dark: #0f0f0f;
+            --card-bg: rgba(20, 20, 20, 0.85);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background: rgba(15, 15, 15, 0.95);
+            border-bottom: 3px solid var(--primary);
+            padding: 25px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        header h1 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 28px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+        }
+
+        header nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        header nav a:hover {
+            background: rgba(255, 255, 9, 0.1);
+            color: var(--primary);
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(255,255,9,0.05) 0%, transparent 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h2 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .hero-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .hero-images img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-images img:hover {
+            transform: scale(1.02);
+        }
+
+        /* SECTION CARD */
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-card h3 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* WHO ARE WE */
+        .who-we-are {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .who-we-are-text h4 {
+            font-size: 20px;
+            color: var(--primary);
+            margin: 20px 0 10px;
+            font-weight: 600;
+        }
+
+        .who-we-are-text p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .who-we-are-image {
+            text-align: center;
+        }
+
+        .who-we-are-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(255, 255, 9, 0.2);
+        }
+
+        /* MEMBERS GRID */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .member-card {
+            background: rgba(30, 30, 30, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(255, 255, 9, 0.15);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 6px 15px rgba(255, 255, 9, 0.3);
+        }
+
+        .member-card h4 {
+            font-size: 22px;
+            color: var(--text);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .member-role {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .member-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* ACHIEVEMENTS */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 9, 0.05);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            background: rgba(255, 255, 9, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 255, 9, 0.2);
+        }
+
+        .achievement-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-card h4 {
+            font-size: 20px;
+            color: var(--text);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .achievement-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), transparent);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+            width: calc(50% - 25px);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            width: calc(50% - 25px);
+            text-align: left;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border: 4px solid var(--dark);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .timeline-content {
+            background: rgba(30, 30, 30, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 30px rgba(255, 255, 9, 0.1);
+        }
+
+        .timeline-year {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 18px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            color: var(--text);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: auto !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-marker {
+                left: 20px;
+            }
+
+            .who-we-are {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: var(--dark);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 3px solid var(--dark);
+        }
+
+        footer h3 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 9, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 9, 0.1);
+        }
+
+        .stat-number {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 40px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <h1>GPTteam</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#members">Team</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#timeline">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h2>About GPTteam</h2>
+            <p>A student-led robotics team #34155 from Karaganda. We build robots, develop technologies, and create opportunities for the STEM community of Kazakhstan.</p>
+            <div class="hero-images">
+                <img src="photo1.jpg" alt="Team at competition" style="background: #444;">
+                <img src="photo2.jpg" alt="Robot in action" style="background: #444;">
+                <img src="logo.png" alt="GPTteam Logo" style="background: #444;">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO ARE WE -->
+    <section id="about" class="section-card">
+        <div class="container">
+            <h3>Who We Are</h3>
+            <div class="who-we-are">
+                <div class="who-we-are-text">
+                    <h4>🤖 Robotics Team</h4>
+                    <p>GPTteam is a team of students from Karaganda region united by a passion for robotics and innovation. We participate in international FIRST competitions and build robots that solve real-world challenges.</p>
+
+                    <h4>🎓 Educational Mission</h4>
+                    <p>Our goal is not only to win, but to develop STEM education in Kazakhstan, support young teams, and create a community of roboticists.</p>
+
+                    <h4>⚡ Innovation & Teamwork</h4>
+                    <p>Every team member brings unique contributions: from programming and engineering design to strategy and project management. Together, we create something greater than just a robot.</p>
+                </div>
+                <div class="who-we-are-image">
+                    <img src="logo.png" alt="GPTteam Logo" style="max-width: 200px; margin: 20px auto; background: rgba(255,255,9,0.05); padding: 30px; border-radius: 12px;">
+                </div>
+            </div>
+
+            <div class="stats-grid" style="margin-top: 50px;">
+                <div class="stat-box">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years in FIRST</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">#34155</div>
+                    <div class="stat-label">FIRST Team</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Team Spirit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section-card">
+        <div class="container">
+            <h3>Our Achievements</h3>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h4>FIRST Competitions</h4>
+                    <p>Participation in international robotics competitions with strong results and recognition</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🤝</div>
+                    <h4>Teamwork</h4>
+                    <p>Building synergy between engineers, programmers, and operators for peak performance</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">💡</div>
+                    <h4>Innovative Projects</h4>
+                    <p>Creating unique solutions for complex robotics challenges and problems</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">📚</div>
+                    <h4>Educational Impact</h4>
+                    <p>Hosting workshops and supporting STEM development in our region</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🌍</div>
+                    <h4>International Recognition</h4>
+                    <p>Collaboration with teams from other countries and knowledge exchange</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">📸</div>
+                    <h4>Visual Documentation</h4>
+                    <p>Professional photography and media coverage of our team journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM MEMBERS -->
+    <section id="members" class="section-card">
+        <div class="container">
+            <h3>Our Team</h3>
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-avatar">I</div>
+                    <h4>Ivan</h4>
+                    <div class="member-role">🔧 Engineer</div>
+                    <p>Robot construction, mechanics, and transmission systems</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">A</div>
+                    <h4>Alex</h4>
+                    <div class="member-role">💻 Web Programmer</div>
+                    <p>Web applications, integration, and control interfaces</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">A</div>
+                    <h4>Aibar</h4>
+                    <div class="member-role">📸 Photographer</div>
+                    <p>Visual storytelling, documentation, and media production</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">M</div>
+                    <h4>Mansur</h4>
+                    <div class="member-role">🤖 Robot Programmer</div>
+                    <p>Firmware, autonomous systems, and robot intelligence</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">A</div>
+                    <h4>Alnur</h4>
+                    <div class="member-role">⚡ Engineer</div>
+                    <p>Electronics, system integration, and diagnostics</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar">N</div>
+                    <h4>Nygmet</h4>
+                    <div class="member-role">🛠️ Builder</div>
+                    <p>Assembly and calibration of robot components</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section-card">
+        <div class="container">
+            <h3>Our Journey</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022-2023</div>
+                        <div class="timeline-title">Foundation</div>
+                        <div class="timeline-desc">Creation of GPTteam, first steps in FIRST, learning robotics fundamentals, and participating in initial competitions.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023-2024</div>
+                        <div class="timeline-title">Development</div>
+                        <div class="timeline-desc">Enhanced skills, development of custom control systems, gaining competition experience, and strengthening team collaboration.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024-2025</div>
+                        <div class="timeline-title">Expansion</div>
+                        <div class="timeline-desc">Launching new projects, first initiatives to support young teams, and participation in regional events and conferences.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025-2026</div>
+                        <div class="timeline-title">Growth</div>
+                        <div class="timeline-desc">Scaling impact, supporting other teams, creating educational resources, international collaboration, and recognition in the FIRST community.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3>GPTteam #34155</h3>
+            <p>Karaganda, Kazakhstan</p>
+            <p style="margin-top: 15px; font-size: 12px;">© 2026 GPTteam. Built for the FIRST Community</p>
+        </div>
+    </footer>
+</body>
+</html>
